@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { bounce } from 'react-animations';
 import trampoline from "./images/trampoline.gif";
 import llamito from "./images/llamito3.gif";
 import './App.css';
