@@ -10,11 +10,12 @@ class App extends Component {
     this.state = {
       bounce: false,
       bounceCount: 0,
-      playing: false
+      audio: ""
     }
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.playRiRi = this.playRiRi.bind(this);
+    this.audio = React.createRef();
   }
   
   mouseDown(e){
@@ -32,26 +33,18 @@ class App extends Component {
   }
 
   playRiRi(e){
-    if(this.state.bounceCount >= 1){
-      e.target.classList.add('playing');
-      const audio = document.querySelector("audio");
-      audio.currentTime = 12;
-      if(e.target.classList.contains('playing')){
-        audio.play();
-      }else {
-        audio.pause();
-      }
-    }
+    e.preventDefault();
+    this.setState({audio: this.audio.current})
+    // let currentTime = this.state.audio.currentTime;
+    // currentTime = 12;
+    // console.log(currentTime)
+    const audio = document.querySelector("audio");
+    // audio.currentTime = 12;
+    console.log(audio.currentTime)
+    audio.addEventListener(e.type, {once: true})
+    audio.play();
   }
-  // function playSound(e) {
-  //   var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  //   var key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-  //   if (!audio) return; //stop the function from running if no audio
-  //   audio.currentTime = 0; //rewind to the start
-  //   audio.play();
-  //   key.classList.add('playing');
-  //   //adds the class playing from the css to the key when that key is pressed giving the animation
-  // }
+
   render() {
     return (
       <div className="App">
@@ -60,7 +53,7 @@ class App extends Component {
           <img alt="trampoline" src={trampoline} id="trampoline"/>
           <img alt="Llamito" src={llamito} onMouseDown={this.mouseDown} onMouseUp={this.mouseUp} onClick={this.playRiRi} className="llamito"/>
         </div>
-        <audio src={badgalriri}></audio>
+        <audio src={badgalriri} ref={this.audio}></audio>
       </div>
     );
   }
