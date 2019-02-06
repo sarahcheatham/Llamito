@@ -128,6 +128,30 @@ body > #root > div {
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
+.wrapper{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: 50px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-bottom: 65px;
+  border-radius: 10px 5px 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  background-color: #E7E3D9;
+  
+}
+#progress {
+  width: 100%;
+  height: 0px;
+  border-radius: 10px 5px 5px 10px;
+  background-color: #C6C63E;
+  text-align: center;
+  line-height: 30px; 
+  color: white; 
+  position: relative;
+}
 
 /* Extra Small and up (Portrait Phones) */
 
