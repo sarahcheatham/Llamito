@@ -132,6 +132,7 @@ body > #root > div {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   width: 50px;
+  border: solid 1px #4A494E;
   margin-left: 50px;
   margin-right: 10px;
   margin-bottom: 65px;
