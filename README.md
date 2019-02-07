@@ -1,13 +1,13 @@
-###Llamito 
+## Llamito 
 
 A clicker game built with React.js
 
-####How to start:
+#### How to start:
 
 git clone 
 
 npm start
 
-#####Goal 
+##### Goal 
 
 Make Llamito vomito!
