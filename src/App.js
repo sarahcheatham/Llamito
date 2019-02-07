@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import trampoline from "./images/trampoline.gif";
 import llamito from "./images/llamito3.gif";
+import cake from "./images/cake.gif";
 import badgalriri from "./audio/06BirthdayCake.m4a"
 import './App.css';
 
@@ -10,12 +11,16 @@ class App extends Component {
     this.state = {
       bounce: false,
       bounceCount: 0,
-      audio: ""
+      audio: "",
+      cake: "",
+      visibility: false
     }
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.playRiRi = this.playRiRi.bind(this);
     this.audio = React.createRef();
+    this.cake = React.createRef();
+    // this.handleHover = this.handleHover.bind(this);
   }
   
   mouseDown(e){
@@ -40,13 +45,25 @@ class App extends Component {
     audio.play();
   }
 
+  // handleHover(e){
+  //   e.preventDefault();
+  //   this.setState({cake: this.cake.current, visibility: !this.state.visibility});
+  //   if(this.state.visibility === true){
+  //     console.log('show')
+  //   } else{
+  //     console.log('hide')
+  //   }
+  // }
+
   render() {
+    
     return (
       <div className="App">
         <div className="header">Llamito</div>
-        <div id="animationContainer">
+        <div id="animationContainer" onMouseOver={this.handleHover}>
           <img alt="trampoline" src={trampoline} id="trampoline"/>
           <img alt="Llamito" src={llamito} onMouseDown={this.mouseDown} onMouseUp={this.mouseUp} onClick={this.playRiRi} className="llamito"/>
+          <img alt="cake" src={cake} id="cake" ref={this.cake}/>
         </div>
         <div className="wrapper">
           <div id="progress"></div>
