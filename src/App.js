@@ -11,16 +11,16 @@ class App extends Component {
     this.state = {
       bounce: false,
       bounceCount: 0,
-      audio: "",
-      cake: "",
-      visibility: false
+      hover: false
     }
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.playRiRi = this.playRiRi.bind(this);
     this.audio = React.createRef();
     this.cake = React.createRef();
-    // this.handleHover = this.handleHover.bind(this);
+    this.animation = React.createRef();
+    this.onHover = this.onHover.bind(this);
+    this.offHover = this.offHover.bind(this);
   }
   
   mouseDown(e){
@@ -39,12 +39,22 @@ class App extends Component {
 
   playRiRi(e){
     e.preventDefault();
-    this.setState({audio: this.audio.current})
-    const audio = document.querySelector("audio");
+    const audio = this.audio.current;
     audio.addEventListener(e.type, {once: true})
     audio.play();
   }
 
+  onHover(e){
+    this.setState({hover: false})
+    const animation = this.animation.current;
+    console.log("animation", animation)
+    console.log("hover:", this.state.hover)
+  }
+
+  offHover(e){
+    this.setState({hover: true})
+    console.log("hover:", this.state.hover)
+  }
   // handleHover(e){
   //   e.preventDefault();
   //   this.setState({cake: this.cake.current, visibility: !this.state.visibility});
@@ -60,7 +70,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header">Llamito</div>
-        <div id="animationContainer" onMouseOver={this.handleHover}>
+        <div id="animationContainer" onMouseEnter={this.onHover} onMouseLeave={this.offHover}>
           <img alt="trampoline" src={trampoline} id="trampoline"/>
           <img alt="Llamito" src={llamito} onMouseDown={this.mouseDown} onMouseUp={this.mouseUp} onClick={this.playRiRi} className="llamito"/>
           <img alt="cake" src={cake} id="cake" ref={this.cake}/>

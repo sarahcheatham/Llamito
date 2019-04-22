@@ -7,6 +7,7 @@ body > #root > div {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 100px 1fr 1fr;
+  cursor: url('./images/cake.gif')
 }
 
 .header{
