@@ -17,7 +17,7 @@ body > #root > div {
   align-self: flex-end;
   margin-left: 8%;
   margin-bottom: 15px;
-  font-family: "jubilat", serif;
+  font-family: jubilat, serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -173,7 +173,7 @@ body > #root > div {
   flex-direction: column;
   margin-right: 10%;
   /* padding-top: 50%; */
-  font-family: "jubilat", serif;
+  font-family: jubilat, serif;
   font-style: normal;
   font-weight: 200;
   font-size: 20px;
