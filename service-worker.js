@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Llamito/precache-manifest.6777aba90bc3217b21d01df70c469171.js"
+  "/Llamito/precache-manifest.0dd75acecd104871de929752e425b818.js"
 );
 
 workbox.clientsClaim();

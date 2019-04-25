@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9047e8824ce606f3688e",
-    "url": "/Llamito/static/css/main.e3a3c7b5.chunk.css"
+    "revision": "e68be74b8d25b7ce9f16",
+    "url": "/Llamito/static/css/main.971bc9e0.chunk.css"
   },
   {
-    "revision": "9047e8824ce606f3688e",
-    "url": "/Llamito/static/js/main.9047e882.chunk.js"
+    "revision": "e68be74b8d25b7ce9f16",
+    "url": "/Llamito/static/js/main.e68be74b.chunk.js"
   },
   {
     "revision": "b744f245c56d628da0c7",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/Llamito/static/media/sick.fb43fff1.mov"
   },
   {
-    "revision": "edc67104c64dccf0207ef9a02fd247e0",
+    "revision": "4b828c1c4e414abfd9b2fd843fce367e",
     "url": "/Llamito/index.html"
   }
 ];
