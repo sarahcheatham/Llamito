@@ -5,7 +5,7 @@ import trampoline from "./images/trampoline.gif";
 import llamito from "./images/llamito3.gif";
 import cake from "./images/cake.gif";
 import badgalriri from "./audio/06BirthdayCake.m4a";
-import vomito from "./video/sick.mov";
+// import vomito from "./video/sick.mov";
 import './App.css';
 
 class App extends Component {
